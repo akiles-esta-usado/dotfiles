@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/akiles/source/luajit/.git'
+let g:netrw_dirhist_4='/shared/apuntes/virtualizacion/kvm'
+let g:netrw_dirhist_3='/shared/apuntes/programming/architecture/tecnicas_herramientas'
+let g:netrw_dirhist_2='/shared/apuntes/programming/architecture'
+let g:netrw_dirhist_1='/shared/apuntes/editores/pandoc/manpage'
+let g:netrw_dirhist_0='/shared/apuntes/editores/vim/tutorials'
+let g:netrw_dirhist_9='/home/akiles/code/universidad/data_science/mat270_numerico/1_ecuaciones_no_lineales/t1'
+let g:netrw_dirhist_8='/shared/apuntes/ac3e/side_projects/contexts/times'
+let g:netrw_dirhist_7='/shared/apuntes/ac3e/side_projects'
+let g:netrw_dirhist_6='/shared/apuntes/editores/vscode/rest_client'

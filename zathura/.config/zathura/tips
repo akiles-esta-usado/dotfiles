@@ -1,0 +1,82 @@
+# set toggle_fullscreen "true"
+
+# Comandos
+## General
+#	J				próxima página
+#	K				página previa
+#	h,j,k,l 		ir a varias direcciones
+#	C-<t, d, u, y>	desplazar media pantalla
+#	a, s			ajustar vista a 'best-fit' o 'widht', ambas bloquean desplazamiento lateral
+#	d			ajustar a modo página dual
+#
+#	? /		buscar
+#	n N		buscar siguiente o previo
+#
+#	o O		abrir documento
+#	f		seguir links
+#	F		mostrar links
+#
+#	:		introducir comando
+#
+#	r		rotar 90°
+#
+#	C-r		invertir colores
+#
+#	R		recargar documento
+#
+#	Tab		mostrar Index
+#
+#	C-m		barra de comandos
+#	C-n		barrita de estado (inferior)
+#
+#
+#
+#
+## Fullscreen
+#	J,K
+#	space
+#	gg, G, *G	ir a primera, última o *-esima página
+#	C-c escape	abortar
+#	F11			modo normal
+#	+,-,=		zoom
+#	q			quit
+#	
+## Presentation
+#	space		Scroll una página
+#	C-c			escape
+#	F5			cambiar a 'normal mode'
+#	q			salir
+#
+## Index (tab)
+#	k,j		moverse
+#	l		abrir una entrada
+#	h		cerrar una entrada
+#	L		abrir todo
+#	H		cerrar todo
+#	space, Return	seleccionar
+#
+## Mouse
+#	Scroll			Scroll
+#	C^Scroll			Zoom
+#	Hold Button2	pan the document
+#	Button1			seguir links
+
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+
+map [normal] f toggle_fullscreen
+
+map [fullscreen] <C-f> <F5>
+
+
+map <Up> zoom in
+map <Down> zoom out
+map [fullscreen] <Up> zoom in
+map [fullscreen] <Down> zoom out
+
+map i recolor
+map [fullscreen] i recolor
+
+
+# map <C-m> C-r
