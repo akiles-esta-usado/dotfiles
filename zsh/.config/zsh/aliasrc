@@ -5,13 +5,12 @@ alias nvim="~/bin/vim"
 
 alias que_hacer="vim ~/.local/que_hacer/index.md"
 
-alias mineria="cd ~/apuntes/universidad/mineria/"
-alias simula="cd ~/apuntes/universidad/simula/"
-alias redes_opticas="cd ~/apuntes/universidad/redes_opticas/"
-alias fisica="cd ~/apuntes/universidad/fisica/"
-alias economia="cd ~/apuntes/universidad/economia/"
-alias numerico="cd ~/apuntes/universidad/numerico/"
-alias horario="eog ~/Imágenes/Horario_2021-1.png"
+alias pdi="cd ~/apuntes/universidad/pdi/"
+alias admin="cd ~/apuntes/universidad/admin/"
+alias redes_wdm="cd ~/apuntes/universidad/redes_wdm/"
+alias plani="cd ~/apuntes/universidad/plani/"
+alias tcd="cd ~/apuntes/universidad/tcd/"
+alias horario="eog ~/Imágenes/Horario_2021-2.png"
 
 alias data_science="cd ~/code/universidad/data_science"
 
@@ -67,7 +66,7 @@ alias youtube_video="youtube-dl --config-location ~/.config/youtube-dl/config_vi
 alias youtube_update="pip3 install youtube-dl --upgrade"
 
 # Basicos
-alias aliases="vim ~/.config/aliasrc"
+alias aliases="vim ~/.config/zsh/aliasrc"
 alias a..="source ~/.zshrc"
 alias ls="ls --sort=extension --color=auto --indicator-style=file-type --group-directories-first"
 alias l="clear ; ls -A"
@@ -93,3 +92,5 @@ alias UNWINDOWS="sudo umount /mnt/kali"
 ## APLICACIONES
 alias gdb="gdb -q"
 alias BOOKS="vim ~/bin/.books"
+
+alias limpiar_node_modules="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"

@@ -15,7 +15,6 @@ require 'paq' {
     'vimwiki/vimwiki';
 
     'ThePrimeagen/vim-be-good';
-    'rafcamlet/nvim-whid';
 }
 
 
