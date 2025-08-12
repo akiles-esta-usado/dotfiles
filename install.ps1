@@ -29,6 +29,9 @@ $config = [ordered]@{
     };
     "SumatraPDF-settings.txt" = [ordered]@{
         "win" = "~/AppData/Local/SumatraPDF/SumatraPDF-settings.txt";
+    };
+    "zathura" = [ordered]@{
+        "linux" = "~/.config/zathura";
     }
 }
 
@@ -120,3 +123,4 @@ linkTool -dotfile "wezterm"
 linkTool -dotfile "helix"
 linkTool -dotfile "presenterm"
 linkTool -dotfile "SumatraPDF-settings.txt"
+linkTool -dotfile "zathura"

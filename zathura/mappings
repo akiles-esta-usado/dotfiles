@@ -1,12 +1,3 @@
-# Visual
-set statusbar-h-padding 0
-set statusbar-v-padding 0
-set page-padding 5
-set adjust-open width
-
-set scroll-hstep -1
-set scroll-step 10
-
 # Zoom
 map J zoom out
 map K zoom in
@@ -24,14 +15,7 @@ map [fullscreen] f scroll full-down
 map [fullscreen] b scroll full-up
 map [fullscreen] <Space> scroll half-down
 
-
 # Misc
 map r reload
 map i recolor
 map p print
-
-# Init Configs
-set guioptions ''
-set show-recent false
-set show-hidden true
-set selection-clipboard clipboard

@@ -1,0 +1,14 @@
+# Visual
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 5
+set adjust-open width
+
+set scroll-hstep -1
+set scroll-step 10
+
+# Init Configs
+set guioptions ''
+set show-recent false
+set show-hidden true
+set selection-clipboard clipboard
