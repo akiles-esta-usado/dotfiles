@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mfontanini/presenterm/master/config-file-schema.json
+options:
+  end_slide_shorthand: true
+  command_prefix: "cmd:"
+

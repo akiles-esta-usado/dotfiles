@@ -11,11 +11,23 @@ $os = `
         $($isMacOS) ? "mac" : `
         $(throw "OS Not supported")
 
+# Which file/dir goes to where based on OS
 $config = [ordered]@{
     "wezterm" = [ordered]@{
         "win" = "~/.config/wezterm";
         "linux" = "~/.config/wezterm";
     };
+    "helix" = [ordered]@{
+        "win" = "~/AppData/Roaming/helix";
+        "linux" = "~/.config/helix";
+    };
+    "presenterm" = [ordered]@{
+        "win" = "~/AppData/Roaming/presenterm";
+        "linux" = "~/.config/presenterm";
+    };
+    "SumatraPDF-settings.txt" = [ordered]@{
+        "win" = "~/AppData/Local/SumatraPDF/SumatraPDF-settings.txt";
+    }
 }
 
 function log($line, $type) {
@@ -103,3 +115,6 @@ function linkTool($dotfile) {
 }
 
 linkTool -dotfile "wezterm"
+linkTool -dotfile "helix"
+linkTool -dotfile "presenterm"
+linkTool -dotfile "SumatraPDF-settings.txt"

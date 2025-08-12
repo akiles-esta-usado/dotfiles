@@ -1,0 +1,73 @@
+# languages.toml
+[[language]]
+name = "markdown"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
+auto-format = true
+
+[[language]]
+name = "typst"
+auto-format = true
+formatter.command = "typstyle"
+language-servers = ["tinymist"]
+
+[[language]]
+name = "toml"
+auto-format = true
+
+[[language]]
+name = "c"
+auto-format = true
+
+[[language]]
+name = "lua"
+auto-format = true
+
+[[language]]
+name = "json"
+auto-format = true
+
+[[language]]
+name = "css"
+auto-format = true
+
+[[language]]
+name = "html"
+auto-format = true
+
+[[language]]
+name = "cpp"
+auto-format = true
+
+[[language]]
+name = "c-sharp"
+auto-format = true
+
+[[language]]
+name = "javascript"
+auto-format = true
+
+[[language]]
+name = "typescript"
+auto-format = true
+
+[[language]]
+name = "jsx"
+auto-format = true
+
+[[language]]
+name = "tsx"
+auto-format = true
+
+[[language]]
+name = "typespec"
+auto-format = true
+
+# https://github.com/Myriad-Dreamin/tinymist/blob/main/editors/neovim/Configuration.md
+[language-server.tinymist]
+command = "tinymist"
+# config = { exportPdf = "onSave", outputPath = "$root/target/$dir/$name" }
+
+[language-server.tinymist.config]
+exportPdf = "onType"
+outputPath = "$root/build/$dir/$name"
+
