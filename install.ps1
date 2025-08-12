@@ -13,12 +13,8 @@ $os = `
 
 $config = [ordered]@{
     "wezterm" = [ordered]@{
-        # "win" = "~/.config/wezterm2";
-        "win" = "~/projects/dotfiles/test2/wezterm2";
+        "win" = "~/.config/wezterm";
         "linux" = "~/.config/wezterm";
-    };
-    "example" = [ordered]@{
-        "win" = "~/projects/dotfiles/test1/example";
     };
 }
 
@@ -54,20 +50,6 @@ function logWarning($line) {
 
 function Resolve-PathSafe($path) {
     $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
-}
-
-function checkConfig($tool, $os) {
-    $paths = $config[$tool];
-    if ($paths -eq $null) {
-        return $null
-    }
-
-    $path = $paths[$os];
-    if ($path -eq $null) {
-        return $null
-    }
-
-    return $path
 }
 
 function linkTool($dotfile) {
@@ -120,9 +102,4 @@ function linkTool($dotfile) {
     }
 }
 
-# Set-Variable -Name isWindows -Value $false -Force
-# Set-Variable -Name isLinux -Value $true -Force
-
-linkTool -dotfile "example"
 linkTool -dotfile "wezterm"
-# linkTool -dotfile "install.ps1"
