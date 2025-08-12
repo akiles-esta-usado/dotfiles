@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 param (
     [switch] $dry = $false,
     [switch] $debugEnabled = $true
