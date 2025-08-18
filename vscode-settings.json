@@ -1,0 +1,50 @@
+{
+    // Telemetry disabled
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "redhat.telemetry.enabled": false,
+    "rest-client.enableTelemetry": false,
+    // Control Version
+    "diffEditor.ignoreTrimWhitespace": false,
+    "scm.defaultViewMode": "tree",
+    "git.autofetch": true,
+    // Editor Configuration
+    "editor.wordWrap": "on",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.size": "fill",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    // Screencast
+    "screencastMode.fontSize": 20,
+    "screencastMode.verticalOffset": 3,
+    // Workbench Configuration
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "workbench.sideBar.location": "right",
+    // SPECIFIC PROFILE CONFIG
+    "workbench.editorAssociations": {
+        "*.pdf": "default"
+    },
+    // Specific language Configuration
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.wordBasedSuggestions": "off",
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

@@ -233,7 +233,7 @@ function addContentKeyBindings(config_keys)
 end
 
 -- Uses C|S {t s repag avpag tab 1 2 3 ...}, C tab
-function addTabKeyBindings(config_keys) 
+function addTabKeyBindings(config_keys)
   -- Open new tab with C+S t
   table.insert(config_keys, { key = 't', mods = 'LEADER', action = act.SpawnTab 'CurrentPaneDomain' })
   -- { key = 'T',        mods = 'CTRL',        action = act.SpawnTab 'CurrentPaneDomain' },
@@ -251,12 +251,12 @@ function addTabKeyBindings(config_keys)
   -- Changes in linear manner with C+S repag avpag
   -- { key = 'PageUp',   mods = 'SHIFT|CTRL',  action = act.MoveTabRelative(-1) },
   -- { key = 'PageDown', mods = 'SHIFT|CTRL',  action = act.MoveTabRelative(1) },
-  
+
   -- Changes in circular manner with C tab and C+S tab
-  table.insert(config_keys, { key = 'n',   mods = 'LEADER',  action = act.ActivateTabRelative(1) })
-  table.insert(config_keys, { key = 'p',   mods = 'LEADER',  action = act.ActivateTabRelative(-1) })
-  table.insert(config_keys, { key = 'n',   mods = 'ALT',  action = act.ActivateTabRelative(1) })
-  table.insert(config_keys, { key = 'p',   mods = 'ALT',  action = act.ActivateTabRelative(-1) })
+  table.insert(config_keys, { key = 'n', mods = 'LEADER', action = act.ActivateTabRelative(1) })
+  table.insert(config_keys, { key = 'p', mods = 'LEADER', action = act.ActivateTabRelative(-1) })
+  table.insert(config_keys, { key = 'n', mods = 'ALT', action = act.ActivateTabRelative(1) })
+  table.insert(config_keys, { key = 'p', mods = 'ALT', action = act.ActivateTabRelative(-1) })
   -- { key = 'Tab',      mods = 'CTRL',        action = act.ActivateTabRelative(1) },
   -- { key = ']',        mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(1) },
   -- { key = '}',        mods = 'SUPER',       action = act.ActivateTabRelative(1) },
@@ -478,6 +478,7 @@ config.key_tables = {
   }
 }
 
+config.default_gui_startup_args = { "connect", "unix" }
 
 local end_time = wezterm.time.now()
 

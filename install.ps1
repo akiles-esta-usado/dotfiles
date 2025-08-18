@@ -27,6 +27,13 @@ $config = [ordered]@{
     };
     "SumatraPDF-settings.txt" = [ordered]@{
         "win" = "~/AppData/Local/SumatraPDF/SumatraPDF-settings.txt";
+    };
+    "marimo" = [ordered]@{
+        "win" = "~/.config/marimo";
+        "linux" = "~/.config/marimo";
+    };
+    "vscode-settings.json" = @{
+        "win" = "~/AppData/Roaming/Code/User/profiles/settings.json"
     }
 }
 
@@ -118,3 +125,5 @@ linkTool -dotfile "wezterm"
 linkTool -dotfile "helix"
 linkTool -dotfile "presenterm"
 linkTool -dotfile "SumatraPDF-settings.txt"
+linkTool -dotfile "marimo"
+linkTool -dotfile "vscode-settings.json"
