@@ -35,7 +35,7 @@ $config = [ordered]@{
         "linux" = "~/.config/marimo";
     };
     "vscode-settings.json" = @{
-        "win" = "~/AppData/Roaming/Code/User/profiles/settings.json"
+        "win" = "~/AppData/Roaming/Code/User/settings.json"
     };
     "zathura" = [ordered]@{
         "linux" = "~/.config/zathura";

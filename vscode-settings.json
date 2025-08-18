@@ -1,8 +1,10 @@
 {
-    // Telemetry disabled
-    "dotnetAcquisitionExtension.enableTelemetry": false,
+    // System minimum configuration
+    "remote.defaultExtensionsIfInstalledLocally": [
+        "GitHub.vscode-pull-request-github"
+    ],
+    "application.shellEnvironmentResolutionTimeout": 120, // 10 seconds originally
     "redhat.telemetry.enabled": false,
-    "rest-client.enableTelemetry": false,
     // Control Version
     "diffEditor.ignoreTrimWhitespace": false,
     "scm.defaultViewMode": "tree",
@@ -22,6 +24,9 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "workbench.sideBar.location": "right",
+    // Rest Client
+    "rest-client.previewOption": "exchange",
+    "rest-client.enableTelemetry": false,
     // SPECIFIC PROFILE CONFIG
     "workbench.editorAssociations": {
         "*.pdf": "default"
@@ -46,5 +51,17 @@
     },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "[csharp]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.formatOnType": true
+    },
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "dotnetAcquisitionExtension.sharedExistingDotnetPath": "C:\\Program Files\\dotnet\\dotnet.exe",
+    "dotnet.autoInsert.enableAutoInsert": true,
+    // Latex
+    "latex-utilities.message.update.show": false,
+    // Espressif Embedded Development
+    "idf.hasWalkthroughBeenShown": true,
+    "idf.gitPathWin": "C:\\code\\.espressif\\tools\\idf-git\\2.39.2\\cmd\\git.exe",
 }
