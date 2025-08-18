@@ -1,0 +1,50 @@
+# set font "inconsolata 11"
+
+# c:cmd s:statusbar h:horizontal scrollbar v:vertical scrollbar
+set guioptions ''
+
+# set statusbar-h-padding 0
+# set statusbar-v-padding 0
+
+# Select the auto adjustment mode (best-fit / width)
+set adjust-open best-fit
+# set adjust-open width
+
+# set advance-pages-per-row
+set database null
+set dbus-service true
+# set incremental-search
+set page-padding 2
+# set page-cache-size 15
+set pages-per-row 1
+
+# Inverting colors
+# set recolor true
+set recolor-keephue true
+# Mantain original image color
+set recolor-reverse-video true
+
+set scroll-hstep -1
+set scroll-step 100
+set scroll-full-overlap 0.01
+set scroll-wrap false
+
+set show-directories true
+set show-hidden true
+set show-recent 10
+
+set scroll-page-aware true
+# set smooth-scroll false
+
+set window-title-home-tilde true
+set window-title-page true
+
+set zoom-min 10
+set selection-clipboard clipboard
+
+set render-loading true
+
+set selection-notification false
+
+    set synctex true
+

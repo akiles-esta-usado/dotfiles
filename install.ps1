@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 param (
     [switch] $dry = $false,
     [switch] $debugEnabled = $true
@@ -34,7 +36,10 @@ $config = [ordered]@{
     };
     "vscode-settings.json" = @{
         "win" = "~/AppData/Roaming/Code/User/profiles/settings.json"
-    }
+    };
+    "zathura" = [ordered]@{
+        "linux" = "~/.config/zathura";
+    };
 }
 
 function log($line, $type) {
@@ -125,5 +130,6 @@ linkTool -dotfile "wezterm"
 linkTool -dotfile "helix"
 linkTool -dotfile "presenterm"
 linkTool -dotfile "SumatraPDF-settings.txt"
+linkTool -dotfile "zathura"
 linkTool -dotfile "marimo"
 linkTool -dotfile "vscode-settings.json"

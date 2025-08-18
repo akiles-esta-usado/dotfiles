@@ -1,0 +1,96 @@
+# Switch back to normal mode.
+# abort
+
+# Adjust page width. Possible arguments are best-fit and width.
+map [normal]     z     adjust_window width
+map [fullscreen] z     adjust_window width
+map [normal]     <C-z> adjust_window best-fit
+map [fullscreen] <C-z> adjust_window best-fit
+
+# Change current mode. Pass the desired mode as argument.
+# change_mode
+
+# Display link target.
+# display_link
+
+# Focus inputbar.
+# focus_inputbar
+
+# Follow a link.
+# follow
+
+# Go to a certain page.
+# goto
+
+# Move forwards/backwards in the jumplist.
+# jumplist
+
+# Navigate to the next/previous page.
+# navigate
+
+# Navigate through the index.
+# navigate_index
+
+# Show the print dialog.
+map p print
+
+# Quit zathura.
+# map q quit
+
+# Recolor pages.
+map [normal]     i recolor
+map [fullscreen] i recolor
+
+# Reload the document.
+map [normal]     r reload
+map [fullscreen] r reload
+
+# Rotate  the page. Pass rotate-ccw as argument for counterclockwise rotation and rotate-cw for clockwise rotation.
+# rotate
+
+# Scroll.
+map [normal]     u scroll half-up
+map [fullscreen] u scroll half-up
+
+map [normal]     d scroll half-down
+map [fullscreen] d scroll half-down
+map [normal]     <Space>  scroll half-down
+map [fullscreen] <Space>  scroll half-down
+
+map [normal]     f scroll full-down
+map [fullscreen] f scroll full-down
+
+map [normal]     b scroll full-up
+map [fullscreen] b scroll full-up
+
+# Search next/previous item.
+# Pass forward as argument to search for the next hit and backward to search for the previous hit.
+# search
+
+# Toggle fullscreen.
+map [normal]     f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+# Show or hide index.
+map [normal]     <F12> toggle_index
+map [fullscreen] <F12> toggle_index
+map [index]      <F12> toggle_index
+
+# Show or hide inputbar.
+# toggle_inputbar
+
+# Toggle between one and multiple pages per row.
+# toggle_page_mode
+
+# Show or hide statusbar.
+# toggle_statusbar
+
+# Zoom in or out.
+map J zoom out
+map K zoom in
+
+# Set a quickmark.
+# mark_add
+
+# Go to a quickmark.
+# mark_evaluate 

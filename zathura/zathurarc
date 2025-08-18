@@ -1,0 +1,4 @@
+# https://manpages.ubuntu.com/manpages/xenial/man5/zathurarc.5.html
+include colors
+include options
+include mappings
