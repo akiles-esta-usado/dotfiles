@@ -133,3 +133,5 @@ linkTool -dotfile "SumatraPDF-settings.txt"
 linkTool -dotfile "zathura"
 linkTool -dotfile "marimo"
 linkTool -dotfile "vscode-settings.json"
+
+Read-Host -Prompt "Presiona una tecla para terminar"
