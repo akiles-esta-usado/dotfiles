@@ -9,6 +9,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "scm.defaultViewMode": "tree",
     "git.autofetch": true,
+    "git.blame.editorDecoration.enabled": false,
     // Editor Configuration
     "editor.wordWrap": "on",
     "editor.minimap.showSlider": "always",
@@ -16,7 +17,11 @@
     "editor.minimap.size": "fill",
     "editor.formatOnSave": true,
     "editor.insertSpaces": true,
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
+    "editor.rulers": [
+        80,
+        100
+    ],
     // Screencast
     "screencastMode.fontSize": 20,
     "screencastMode.verticalOffset": 3,
@@ -64,4 +69,13 @@
     // Espressif Embedded Development
     "idf.hasWalkthroughBeenShown": true,
     "idf.gitPathWin": "C:\\code\\.espressif\\tools\\idf-git\\2.39.2\\cmd\\git.exe",
+    "[veryl]": {
+        "editor.formatOnSave": true
+    },
+    "[nix]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.formatOnSave": false
+    },
+    "nix.enableLanguageServer": false,
 }
