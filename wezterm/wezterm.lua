@@ -25,7 +25,7 @@ config.default_prog = {
 }
 
 
-config.automatically_reload_config = true
+config.automatically_reload_config = false
 config.front_end = "WebGpu"
 config.check_for_updates = true
 
@@ -33,7 +33,8 @@ config.check_for_updates = true
 -------------------
 
 config.font = wezterm.font "Cascadia Mono"
-config.font_size = 12                       -- Default
+config.font_size = 12 -- Default
+config.term = "xterm-256color"
 
 -- config.window_background_opacity = 0.95
 -- config.window_decorations = "RESIZE"

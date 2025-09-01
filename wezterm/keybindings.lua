@@ -1,11 +1,12 @@
 local wezterm = require "wezterm"
 local act = wezterm.action
+-- local resurrect = wezterm.plugin.require("https://github.com/MLFlexer/resurrect.wezterm")
 
 -- Leader   { { } }
 -- Alt      { h j k l z}
 -- Ctrl-Alt { h j k l }
 local function addPaneKeyBindings(config_keys)
-  local splitVertical   = act.SplitVertical   { domain = 'CurrentPaneDomain' }
+  local splitVertical   = act.SplitVertical { domain = 'CurrentPaneDomain' }
   local splitHorizontal = act.SplitHorizontal { domain = 'CurrentPaneDomain' }
 
   -- Create panes
@@ -20,14 +21,14 @@ local function addPaneKeyBindings(config_keys)
   table.insert(config_keys, { key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' })
   table.insert(config_keys, { key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Up' })
   table.insert(config_keys, { key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down' })
-  table.insert(config_keys, { key = 'p', mods = 'ALT', action = act.ActivatePaneDirection('Prev'), })
-  table.insert(config_keys, { key = 'n', mods = 'ALT', action = act.ActivatePaneDirection('Next'), })
+  table.insert(config_keys, { key = 'p', mods = 'ALT', action = act.ActivatePaneDirection 'Prev' })
+  table.insert(config_keys, { key = 'n', mods = 'ALT', action = act.ActivatePaneDirection 'Next' })
 
   -- Adjust size with C-Alt h j k l
-  table.insert(config_keys, { key = 'h', mods = 'ALT|CTRL', action = act.AdjustPaneSize { 'Left',  3 } })
+  table.insert(config_keys, { key = 'h', mods = 'ALT|CTRL', action = act.AdjustPaneSize { 'Left', 3 } })
   table.insert(config_keys, { key = 'l', mods = 'ALT|CTRL', action = act.AdjustPaneSize { 'Right', 3 } })
-  table.insert(config_keys, { key = 'k', mods = 'ALT|CTRL', action = act.AdjustPaneSize { 'Up',    3 } })
-  table.insert(config_keys, { key = 'j', mods = 'ALT|CTRL', action = act.AdjustPaneSize { 'Down',  3 } })
+  table.insert(config_keys, { key = 'k', mods = 'ALT|CTRL', action = act.AdjustPaneSize { 'Up', 3 } })
+  table.insert(config_keys, { key = 'j', mods = 'ALT|CTRL', action = act.AdjustPaneSize { 'Down', 3 } })
 
   -- Resize Pane Mode
   local activateResizePanesMode = act.ActivateKeyTable {
@@ -77,12 +78,12 @@ local function addContentKeyBindings(config_keys)
   table.insert(config_keys, { key = 'PageUp', mods = 'ALT', action = act.ScrollByPage(-.5) })
 
   -- Copy and paste from clipboard
-  table.insert(config_keys, { key = 'C', mods = 'SHIFT|CTRL', action = act.CopyTo    'Clipboard' })
+  table.insert(config_keys, { key = 'C', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' })
   table.insert(config_keys, { key = 'V', mods = 'SHIFT|CTRL', action = act.PasteFrom 'Clipboard' })
 
   -- Copy and paste from primary selection (local)
   table.insert(config_keys, { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom 'PrimarySelection' })
-  table.insert(config_keys, { key = 'Insert', mods = 'CTRL',  action = act.CopyTo 'PrimarySelection' })
+  table.insert(config_keys, { key = 'Insert', mods = 'CTRL', action = act.CopyTo 'PrimarySelection' })
 
   -- Search text
   local currentSelectionOrEmptyString = act.Search 'CurrentSelectionOrEmptyString'
@@ -93,7 +94,7 @@ local function addContentKeyBindings(config_keys)
 
   -- Copy mode
   table.insert(config_keys, { key = 'x', mods = 'CTRL', action = act.ActivateCopyMode })
-  
+
   -- Emoji panel
   local clipboardAndPrimarySelection = act.CharSelect { copy_on_select = true, copy_to = 'ClipboardAndPrimarySelection' }
   table.insert(config_keys, { key = 'u', mods = 'CTRL', action = clipboardAndPrimarySelection })
@@ -110,13 +111,13 @@ local function addTabKeyBindings(config_keys)
 
   -- Open new tab with C+S t
   table.insert(config_keys, { key = 't', mods = 'CTRL', action = act.SpawnTab 'CurrentPaneDomain' })
-  
+
   -- Close current tab with C+S w
   table.insert(config_keys, { key = 'w', mods = 'CTRL', action = act.CloseCurrentTab { confirm = true } })
 
   -- Move tabs
-  table.insert(config_keys, { key = '{',   mods = 'CTRL',  action = act.MoveTabRelative(-1) })
-  table.insert(config_keys, { key = '}', mods = 'CTRL',  action = act.MoveTabRelative(1) })
+  table.insert(config_keys, { key = '{', mods = 'CTRL', action = act.MoveTabRelative(-1) })
+  table.insert(config_keys, { key = '}', mods = 'CTRL', action = act.MoveTabRelative(1) })
 
   -- Relative change tab
   table.insert(config_keys, { key = '}', mods = 'ALT', action = act.ActivateTabRelative(1) })
@@ -142,7 +143,7 @@ local function addTabKeyBindings(config_keys)
       end
     )
   }
-  table.insert(config_keys, { key = ',', mods = 'CTRL',       action = promptTabNameCallback })
+  table.insert(config_keys, { key = ',', mods = 'CTRL', action = promptTabNameCallback })
 end
 
 local function addSessionKeyBindings(config_keys)
@@ -163,27 +164,40 @@ local function addSessionKeyBindings(config_keys)
       end
     )
   }
-  table.insert(config_keys, { key = '$', mods = 'LEADER|SHIFT', action = promptSessionNameCallback})
+  table.insert(config_keys, { key = '$', mods = 'LEADER|SHIFT', action = promptSessionNameCallback })
 
   -- Attach to / detach from domains
-  table.insert(config_keys, { key = 'a', mods = 'LEADER', action = act.AttachDomain "unix", })
-  table.insert(config_keys, { key = 'd', mods = 'LEADER', action = act.DetachDomain { DomainName = "unix" }, })
+  table.insert(config_keys, { key = 'a', mods = 'LEADER', action = act.AttachDomain "unix" })
+  table.insert(config_keys, { key = 'd', mods = 'LEADER', action = act.DetachDomain { DomainName = "unix" } })
+
+  -- Resurrect
+  -- table.insert(config_keys, { key = "w", mods = "ALT", action = wezterm.action_callback(function(win, pane)
+  --       resurrect.state_manager.save_state(resurrect.workspace_state.get_workspace_state())
+  --     end),
+  -- })
+  -- table.insert(config_keys, { key = "W", mods = "ALT", action = resurrect.window_state.save_window_action()})
+  -- table.insert(config_keys, { key = "T", mods = "ALT", action = resurrect.tab_state.save_tab_action(),
+  -- })
+  -- table.insert(config_keys, { key = "s", mods = "ALT", action = wezterm.action_callback(function(win, pane)
+  --       resurrect.state_manager.save_state(resurrect.workspace_state.get_workspace_state())
+  --       resurrect.window_state.save_window_action()
+  --     end),
+  -- })
 end
 
 local module = {}
 
 function module.apply_to_config(config)
+  config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000, }
+  config.disable_default_key_bindings = true
 
-    config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000, }
-    config.disable_default_key_bindings = true
+  addWindowKeyBindings(config.keys)
+  addContentKeyBindings(config.keys)
+  addTabKeyBindings(config.keys)
+  addPaneKeyBindings(config.keys)
 
-    addWindowKeyBindings(config.keys)
-    addContentKeyBindings(config.keys)
-    addTabKeyBindings(config.keys)
-    addPaneKeyBindings(config.keys)
-
-    -- Session vs Domain vs Workspace vs Tab vs Pane
-    addSessionKeyBindings(config.keys)
+  -- Session vs Domain vs Workspace vs Tab vs Pane
+  addSessionKeyBindings(config.keys)
 end
 
 return module
