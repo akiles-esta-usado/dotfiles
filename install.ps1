@@ -40,6 +40,9 @@ $config = [ordered]@{
     "zathura" = [ordered]@{
         "linux" = "~/.config/zathura";
     };
+    "fonts" = @{
+        "win" = "~/AppData/Local/Microsoft/Windows/Fonts/"
+    }
 }
 
 function log($line, $type) {
@@ -133,5 +136,6 @@ linkTool -dotfile "SumatraPDF-settings.txt"
 linkTool -dotfile "zathura"
 linkTool -dotfile "marimo"
 linkTool -dotfile "vscode-settings.json"
+linkTool -dotfile "fonts"
 
 Read-Host -Prompt "Presiona una tecla para terminar"

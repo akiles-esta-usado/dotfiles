@@ -22,11 +22,10 @@
         80,
         100
     ],
+    "editor.experimental.treeSitterTelemetry": false,
     // Screencast
     "screencastMode.fontSize": 20,
     "screencastMode.verticalOffset": 3,
-    // Workbench Configuration
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "workbench.sideBar.location": "right",
     // Rest Client
@@ -74,6 +73,9 @@
         "diffEditor.ignoreTrimWhitespace": false,
         "editor.tabSize": 4
     },
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.enablePerfTelemetry": false,
+    "python.analysis.reportExtraTelemetry": false,
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -119,4 +121,15 @@
         ".vscode",
         ".venv",
     ],
+    "[typst]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "myriad-dreamin.tinymist"
+    },
+    "tinymist.formatterMode": "typstyle",
+    "tinymist.lint.enabled": true,
+    "tinymist.lint.when": "onSave",
+    "tinymist.exportPdf": "onType",
+    "tinymist.outputPath": "$root/build/$dir/$name",
+    "nrf-connect.enableTelemetry": false,
+    "update.mode": "manual",
 }
